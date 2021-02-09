@@ -7,4 +7,4 @@ I'm a programmer and data strategist, snowboarder and rock-climber. Currently fo
 
 Email me at bender2242 [at] gmail.com
 
-#This too shall pass#
+*This too shall pass*
