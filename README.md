@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Personal website for David Bender, with a focus on real estate data, technology, and trends.
+
+Made with NextJS
