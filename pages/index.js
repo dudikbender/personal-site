@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle, email } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
@@ -21,14 +21,13 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hey, I'm David. Trying out Next.js for pleasure and future profit.</p>
+        <p>Writing and concepts from David Bender</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          <a href="https://github.com/dudikbender">Github</a> -- <a href='https://www.linkedin.com/in/david-bender-a0032365/'>LinkedIn</a>
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>My Blog</h2>
+        <h2 className={utilStyles.headingLg}>Writing</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -42,6 +41,9 @@ export default function Home({ allPostsData }) {
           </li>
           ))}
         </ul>
+      </section>
+      <section className={utilStyles.headingSm}>
+        <p>Contact me at {email}</p>
       </section>
     </Layout>
   )
