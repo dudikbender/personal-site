@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
-import Sidebar from '../components/sidebar'
+import NavBar from '../components/navbar'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -52,7 +52,7 @@ export default function Home({ allPostsData }) {
 Home.getLayout = function getLayout(page) {
   return (
     <Layout>
-      <Sidebar />
+      <NavBar />
       {page}
     </Layout>
   )

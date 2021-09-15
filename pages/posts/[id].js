@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
     return (
-      <Layout>
+      <>
         <Head>
           <title>{postData.title}</title>
         </Head>
@@ -41,6 +41,6 @@ export default function Post({ postData }) {
             <a>← Back to writing</a>
           </Link>
         </div>
-      </Layout>
+      </>
     )
   }

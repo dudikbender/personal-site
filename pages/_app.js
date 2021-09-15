@@ -1,8 +1,15 @@
 import '../styles/global.css'
+import App from 'next/app'
+import Layout from '../components/layout'
+import NavBar from '../components/navbar'
 
 export default function MyApp({ Component, pageProps }) {
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page)
-
-  return getLayout(<Component {...pageProps} />)
+  return (
+    <>
+    <NavBar />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+    </>
+  )
 }
