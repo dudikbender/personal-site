@@ -15,30 +15,17 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ allPostsData }) {
+export default function About({ allPostsData }) {
   return (
     <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingLg}>
-        <p>Writing and concepts from David Bender</p>
+        <p>About David Bender</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Writing</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
-          ))}
-        </ul>
+        <h2 className={utilStyles.headingLg}>Information about me</h2>
       </section>
       <section className={utilStyles.headingSm}>
         <p>Contact me at {email}
@@ -49,7 +36,7 @@ export default function Home({ allPostsData }) {
   )
 }
 
-Home.getLayout = function getLayout(page) {
+About.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
