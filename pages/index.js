@@ -48,12 +48,3 @@ export default function Home({ allPostsData }) {
     </>
   )
 }
-
-Home.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <NavBar />
-      {page}
-    </Layout>
-  )
-}
