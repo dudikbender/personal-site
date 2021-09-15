@@ -4,6 +4,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import styles from '../../components/layout.module.css'
+import Layout from '../../components/layout'
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
     return (
-      <>
+      <Layout>
         <Head>
           <title>{postData.title}</title>
         </Head>
@@ -40,6 +41,6 @@ export default function Post({ postData }) {
             <a>← Back to writing</a>
           </Link>
         </div>
-      </>
+      </Layout>
     )
   }
