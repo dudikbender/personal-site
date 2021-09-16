@@ -4,7 +4,6 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import styles from '../../components/layout.module.css'
-import Layout from '../../components/layout'
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)

@@ -13,8 +13,8 @@ export default function NavBar() {
             priority
             src="/images/profile.jpg"
             className={utilStyles.borderCircle}
-            height={50}
-            width={50}
+            height={70}
+            width={70}
           />
         </a>
       </Link>
