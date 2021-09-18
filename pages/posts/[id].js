@@ -36,7 +36,7 @@ export default function Post({ postData }) {
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
         <div className={styles.backToHome}>
-          <Link href="/">
+          <Link href="/writing">
             <a>← Back to writing</a>
           </Link>
         </div>
