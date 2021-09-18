@@ -1,6 +1,6 @@
 ---
 title: 'Practical Lessons for Digital Transformation in Real Estate Investing'
-date: '2021-09-10'
+date: '2021-01-20'
 ---
 
 #### Practical lessons from our real estate investment firm’s digital transformation journey — from doubt to conviction, and silos to scalability.
