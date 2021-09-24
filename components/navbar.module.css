@@ -7,6 +7,11 @@
     padding: 32px;
     border-right: 1px solid #eaeaea;
   }
+
+  .scrolled{
+    position: sticky;
+    top: 0;
+  }
   
   .nav > a {
     margin: auto;
@@ -40,4 +45,3 @@
     padding: 8px 16px;
     height: 20px;
   }
-  

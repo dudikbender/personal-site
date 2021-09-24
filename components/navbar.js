@@ -3,9 +3,29 @@ import styles from './navbar.module.css'
 export const siteTitle = 'David Bender\'s Site'
 import Image from 'next/image'
 import utilStyles from '../styles/utils.module.css'
+import React,{useEffect} from 'react';
 
 export default function NavBar() {
-  return (
+  const [scrolled,setScrolled]=React.useState(false);
+  const handleScroll=() => {
+    const offset=window.scrollY;
+    if(offset > 200 ){
+      setScrolled(true);
+    }
+    else{
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll',handleScroll)
+  }, [])
+let navbarClasses=['navbar'];
+  if(scrolled){
+    navbarClasses.push('scrolled');
+  }
+
+   return (
     <nav className={styles.nav}>
       <Link href="/">
         <a>
@@ -18,11 +38,6 @@ export default function NavBar() {
           />
         </a>
       </Link>
-      <h2 className={utilStyles.headingLg}>
-        <Link href="/">
-          <a className={utilStyles.colorInherit}></a>
-        </Link>
-      </h2>
       <Link href="/about">
         <a>About</a>
       </Link>
